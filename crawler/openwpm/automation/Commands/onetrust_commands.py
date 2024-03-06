@@ -20,7 +20,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 import logging
 import re
 import json
-import js2py
+import sys
+# NOTE: https://github.com/PiotrDabkowski/Js2Py/issues/317
+if sys.version_info.minor != 12:
+    import js2py
 
 from typing import Optional, List, Tuple, Dict, Any
 
